@@ -1,5 +1,8 @@
 <script>
     export let title="",
+               title_info="",
+               content_info="",
+               textField="",     
                isAvatar = false , 
                isDescription = false;
 
@@ -26,7 +29,20 @@
     <div class="title">
         {title}
     </div>
-    <div class="topic__container">
-        <strong>{titleTopic} : </strong> Rua do Sobe desce quer o numero desaparece, 313, Rio de Janeiro - RJ
+    <div class="container__info">
+        <strong>{title_info} </strong> {content_info}
+    </div>
+    <div class="container_textField">
+        {textField}
+    </div>
+    <div class="container-dotList">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    <div class="container-skillList">
+        <ul>
+            <li></li>
+        </ul>
     </div>
 </div>
