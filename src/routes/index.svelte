@@ -1,18 +1,16 @@
 <script>
 	import Header from '../components/Header/header.svelte';
 	import Context from '../components/Context/context.svelte';
-	import { experience } from '../api/experience.js'
 	import { user } from '../api/user.js'
 </script>
-<style>
+<style lang="scss">
 	.body{
-		width: 100vw;
-		height: 100vh;
+		max-width: 100vw;
+		height: auto;
 	}
 	.wrap{
-		position: fixed;
-		top: 12.5%;
-		left: 15%;
+		width: 80%;
+		margin: 10vh auto;
 	}
 </style>
 
@@ -42,6 +40,11 @@
 			title="Educação"
 			hasDotList='true'
 			doList={user.user.profile.academic}
+		/>
+		<Context 
+			title="Experiencia"
+			hasExperience={true}
+			expList={user.user.experience}
 		/>
 	</div>
 </div>

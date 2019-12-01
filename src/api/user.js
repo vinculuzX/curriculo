@@ -20,11 +20,25 @@ export const user = {
 			}],
 			"skills": {},
 			academic: [
-				"Graduacao: Engenharia",
-				"Pos Graduacao: Energia Elétrica",
-				"Ingles: Avançado"
+				"Graduacao - Engenharia",
+				"Pos Graduacao - Energia Elétrica",
+				"Ingles - Avançado"
 			],
 			"extras": {}
-		}
+		},
+		experience:[
+			{
+				company:"XYZ",
+				start_date:"01.01.2019",
+				end_date:"01.10.2019",
+				description:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make n book. It has survived not only five centuries,and scrambled it to make a"
+			},
+			{
+				company:"XYZ",
+				start_date:"01.01.2019",
+				end_date:"01.10.2019",
+				description:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make n book. It has survived not only five centuries,and scrambled it to make a"
+			}
+		]
 	}
 };

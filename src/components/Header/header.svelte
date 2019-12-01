@@ -3,6 +3,8 @@
                name = "Abraão",
                surname="Reis",
                ocupation="Front End Developer"; 
+
+    const addIcons = '../../assets/images/add.png';
 </script>
 <style>
     .grid{
@@ -43,7 +45,10 @@
 </style>
 
 <div class="grid header">
-    <img src={src} alt="avatar">
+    <div class="image-profile">
+        <img src={src} alt="avatar">
+        <img src={addIcons} alt="addIcons">
+    </div>
     <div class="profile">
         <p>Olá , meu nome é</p>
         <h1>{name} • {surname}</h1>
