@@ -42,6 +42,11 @@
 			doList={user.user.profile.academic}
 		/>
 		<Context 
+			title="Habilidades Técnicas"
+			hasDotSkill='true'
+			skillList={user.user.profile.skills}
+		/>
+		<Context 
 			title="Experiencia"
 			hasExperience={true}
 			expList={user.user.experience}

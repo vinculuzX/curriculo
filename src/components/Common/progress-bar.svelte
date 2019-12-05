@@ -16,5 +16,5 @@
 </style>
 
 <div class="progress-max">
-    <div class="progress-percent"></div>
+    <div class="progress-percent" style="width:{percent}%"></div>
 </div>

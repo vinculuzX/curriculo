@@ -2,13 +2,18 @@
     export let title="",
                textField="",
                doList=[],
-               dotSkill=[],
+               skillList=[
+                   {
+                       name:"",
+                       percent:""
+                   }
+                ],
                expList=[
                    {
-                    company:"",
-                    start_date:"",
-                    end_date:"",
-                    description:"" 
+                        company:"",
+                        start_date:"",
+                        end_date:"",
+                        description:"" 
                    }
                ],
                infoList=[
@@ -23,7 +28,7 @@
                hasDotList = false,
                hasExperience = false;
 
-
+    import ProgressBar from '../Common/progress-bar.svelte'
     
 </script>
 <style lang="scss">
@@ -44,6 +49,25 @@
                 }
             } 
         }
+        &__skillList{
+            font-size: 16px;
+            font-family: 'Roboto';
+            .skill{
+                 grid-template-columns: 24px 100px 250px 10px;
+                 grid-column-gap: 25px;
+                 display: grid;
+                 align-items: baseline;
+                 margin:10px 0px;
+                 &__type{
+                     text-transform: capitalize;
+                     font-size: 18px;
+                 }
+                 &__level{
+                    font-size:14px;
+                    color:#767676
+                 }
+            }
+        }
         &__experience{
             font-size: 16px;
             font-family: 'Roboto';
@@ -52,12 +76,12 @@
                 &__title{
                     text-transform: uppercase;
                     font-size: 22px;
-                    margin:6px 0px;
+                    margin:11px 0px;
                     font-weight: bolder;
                 }
                 &__period{
                     width: 190px;
-                    margin:6px 0px;
+                    margin:9px 0px;
                     font-weight: bold;
                     font-size:14px;
                     display: grid;
@@ -76,6 +100,14 @@
 
         }    
     }
+    .dot{
+        width: 24px;
+        height: 24px;
+        background-color: #E8E8E8;
+        border-radius: 50%;
+        position: relative;
+        top: 5px;
+    }
     .split-line{
         width:40px;
         height: 1px;
@@ -91,8 +123,8 @@
         line-height: 37px;
         display: flex;
         align-items: baseline;
-        text-align: right;
         text-transform: capitalize;
+        text-align: right;
     }
     .block{
         font-family: 'Roboto';
@@ -142,10 +174,19 @@
         </div>
     {/if}
     {#if hasDotSkill}
-    <div class="container-skillList">
-        <ul>
-            <li></li>
-        </ul>
+    <div class="container__skillList">
+        {#each skillList as item}
+            <div class="skill">
+                <div class="dot"></div>
+                <div class="skill__type">{item.name}</div>
+                <div class="skill__progress">
+                    <ProgressBar percent={item.percent}/>
+                </div>
+                <div class="skill__level">
+                    {item.percent}%
+                </div>
+            </div>
+        {/each}
     </div>
     {/if}
     {#if hasExperience} 
